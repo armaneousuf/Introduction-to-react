@@ -10,7 +10,7 @@ const ScoreInAnOver = () => {
     } else {
       if (runs === 4) alert("It's a four");
       if (runs === 6) alert("It's a six!");
-      setScore(score + runs);
+      setScore((prev) => prev + runs);
     }
   };
 
