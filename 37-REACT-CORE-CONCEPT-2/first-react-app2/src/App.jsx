@@ -1,7 +1,21 @@
-import Count from './components/count'
+// import PageCounter from './components/PageCounter';
+// import Count from './components/count'
+import BallInAOver from './components/BallInAOver'
 import './App.css'
 
 function App() {
+  return (
+    <div>
+<BallInAOver></BallInAOver>
+    </div>
+  )
+}
+
+export default App;
+
+
+
+/* function App() {
   function handleBTN1() {
     alert("Clicked btn 1");
   }
@@ -12,12 +26,12 @@ function App() {
 
   return (
     <div>
+      <PageCounter></PageCounter>
       <Count>0</Count>
      <button onClick={handleBTN1}>Click me</button>
       <button onClick={() => handleBTN2(5)}>Click me</button>
        
     </div>
   )
-}
+} */
 
-export default App
