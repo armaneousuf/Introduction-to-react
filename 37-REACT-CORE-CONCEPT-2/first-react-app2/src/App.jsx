@@ -1,12 +1,12 @@
 // import PageCounter from './components/PageCounter';
 // import Count from './components/count'
-import BallInAOver from './components/BallInAOver'
+import ScoreInAnOver from './components/ScoreInAnOver'
 import './App.css'
 
 function App() {
   return (
     <div>
-<BallInAOver></BallInAOver>
+<ScoreInAnOver></ScoreInAnOver>
     </div>
   )
 }
