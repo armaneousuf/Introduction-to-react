@@ -1,3 +1,4 @@
+import Count from './components/count'
 import './App.css'
 
 function App() {
@@ -11,8 +12,9 @@ function App() {
 
   return (
     <div>
+      <Count>0</Count>
      <button onClick={handleBTN1}>Click me</button>
-     <button onClick={()=> handleBTN2(5)}>Click me</button>
+      <button onClick={() => handleBTN2(5)}>Click me</button>
        
     </div>
   )
