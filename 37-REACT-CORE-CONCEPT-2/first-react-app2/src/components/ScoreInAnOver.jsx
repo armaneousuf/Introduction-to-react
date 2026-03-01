@@ -5,7 +5,7 @@ const ScoreInAnOver = () => {
 
   const addScore = (runs) => {
     if (runs === 0) {
-      setScore(0);
+      setScore(0); // or setScore(score * 0) which is mathmetically correct but not programmitically
       alert("You're out!");
     } else {
       if (runs === 4) alert("It's a four");
