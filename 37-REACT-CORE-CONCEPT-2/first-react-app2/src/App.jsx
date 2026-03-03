@@ -5,7 +5,7 @@ import Users from "./components/Users";
 import "./App.css";
 import { Suspense } from "react";
 
-const fetchUsers = fetch("https://jsonplaceholder.typicode.com/users")
+const fetchUsers = fetch("https://jsonplaceholder.typicode.com/users/")
 .then(res => res.json())
 
 function App() {
