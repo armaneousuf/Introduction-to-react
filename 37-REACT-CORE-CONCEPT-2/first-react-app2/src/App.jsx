@@ -3,24 +3,40 @@
 // import ScoreInAnOver from "./components/ScoreInAnOver";
 // import Users from "./components/Users";
 import "./App.css";
-import Posts from './components/Posts';
-import { Suspense } from "react";
-
-const fetchPosts = async () => {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-  return res.json();
-}
+// import Posts from "./components/Posts";
+// import { Suspense } from "react";
+import UserCard from "./components/UserCard";
 
 function App() {
-  const postPromise = fetchPosts();
+  const user = { name: "Yousuf", age: 25, city: "Dhaka" };
   return (
-    <div>
-      <Suspense fallback={<h3>Posts are loading...</h3>}>
-        <Posts postPromise={postPromise}></Posts>
-      </Suspense>
-    </div>
+    <>
+      <UserCard user={user} />
+      {/* <UserCard name="Yousuf" age={25} />
+      <UserCard name="Noboni" age={24} />
+      <UserCard name="Ruhaiaa" age={22} /> */}
+    </>
   )
 }
+
+
+export default App;
+
+// const fetchPosts = async () => {
+//   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+//   return res.json();
+// }
+
+// function App() {
+//   const postPromise = fetchPosts();
+//   return (
+//     <div>
+//       <Suspense fallback={<h3>Posts are loading...</h3>}>
+//         <Posts postPromise={postPromise}></Posts>
+//       </Suspense>
+//     </div>
+//   )
+// }
 
 
 // const fetchUsers = fetch("https://jsonplaceholder.typicode.com/users/")
@@ -37,7 +53,6 @@ function App() {
 //   );
 // }
 
-export default App;
 
 /* function App() {
   function handleBTN1() {
