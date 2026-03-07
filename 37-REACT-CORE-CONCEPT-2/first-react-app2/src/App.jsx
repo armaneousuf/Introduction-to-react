@@ -1,23 +1,41 @@
 // import PageCounter from './components/PageCounter';
 // import Count from './components/count'
-import ScoreInAnOver from "./components/ScoreInAnOver";
-import Users from "./components/Users";
+// import ScoreInAnOver from "./components/ScoreInAnOver";
+// import Users from "./components/Users";
 import "./App.css";
+import Posts from './components/Posts';
 import { Suspense } from "react";
 
-const fetchUsers = fetch("https://jsonplaceholder.typicode.com/users/")
-.then(res => res.json())
+const fetchPosts = async () => {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  return res.json();
+}
 
 function App() {
+  const postPromise = fetchPosts();
   return (
     <div>
-      <ScoreInAnOver></ScoreInAnOver>
-      <Suspense fallback={<h3>Loading...</h3>}>
-        <Users fetchUsers={fetchUsers}></Users>
+      <Suspense fallback={<h3>Posts are loading...</h3>}>
+        <Posts postPromise={postPromise}></Posts>
       </Suspense>
     </div>
-  );
+  )
 }
+
+
+// const fetchUsers = fetch("https://jsonplaceholder.typicode.com/users/")
+// .then(res => res.json())
+
+// function App() {
+//   return (
+//     <div>
+//       <ScoreInAnOver></ScoreInAnOver>
+//       <Suspense fallback={<h3>Loading...</h3>}>
+//         <Users fetchUsers={fetchUsers}></Users>
+//       </Suspense>
+//     </div>
+//   );
+// }
 
 export default App;
 
