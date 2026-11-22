@@ -3,6 +3,7 @@ import LikeButton from './components/LikeButton';
 import Menu from './components/Menu';
 import MovieCard from './components/MovieCard';
 import LightSwitch from './components/LightSwitch';
+import CharCounter from './components/CharCounter';
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       {/* <Menu /> */}
       {/* <LikeButton /> */}
       {/* <LightSwitch /> */}
+      <CharCounter />
     </div>
   )
 }
