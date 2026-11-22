@@ -2,6 +2,7 @@ import BusinessCard from './components/BusinessCard';
 import LikeButton from './components/LikeButton';
 import Menu from './components/Menu';
 import MovieCard from './components/MovieCard';
+import LightSwitch from './components/LightSwitch';
 
 export default function App() {
   return (
@@ -11,7 +12,8 @@ export default function App() {
       <MovieCard title="movie 2" releaseYear={2015} isFavorite={true} />
       <MovieCard title="movie 3" releaseYear={2019} isFavorite={false} /> */}
       {/* <Menu /> */}
-      <LikeButton />
+      {/* <LikeButton /> */}
+      {/* <LightSwitch /> */}
     </div>
   )
 }
